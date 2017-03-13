@@ -35,7 +35,7 @@ public class Rand{
 		logger.info("endindex"+endIndex);
 		String rand= Integer.toString(r);
 		logger.info("Random Number Generated:\t"+rand);
-		String set=s.replace(s.substring(startIndex+1, endIndex-1), rand);
+		String set=s.replaceFirst(s.substring(startIndex+1, endIndex-1), rand);
 		logger.info("Replaced the Old Container Name with New Container Name Randomly"+set);
 		logger.info("Storing the Container name for further Refernces");
 		String ContainerName=set.substring(startIndex-4, endIndex-1).trim();
@@ -69,7 +69,7 @@ public class Rand{
 		logger.info("endindex"+endIndex);
 		String rand= Integer.toString(r);
 		logger.info("Random Number Generated:\t"+rand);
-		String set=s.replace(s.substring(startIndex+1, endIndex-1), rand);
+		String set=s.replaceFirst(s.substring(startIndex+1, endIndex-1), rand);
 		logger.info("Replaced Group Name:\t"+set);
 		logger.info("Storing the Group name for further Refernces");
 		String GroupName=set.substring(startIndex-5, endIndex-1).trim();
@@ -101,7 +101,7 @@ public class Rand{
 		logger.info("endindex"+endIndex);
 		String rand= Integer.toString(r);
 		logger.info("Random Number Generated:\t"+rand);
-		String set=s.replace(s.substring(startIndex+1, endIndex-1), rand);
+		String set=s.replaceFirst(s.substring(startIndex+1, endIndex-1), rand);
 		logger.info("Replaced subscription Name:\t"+set);
 		logger.info("Storing the subscription name for further Refernces");
 		String subscriptionName=set.substring(startIndex-9, endIndex-1).trim();
@@ -133,7 +133,7 @@ public class Rand{
 		logger.info("endindex"+endIndex);
 		String rand= Integer.toString(r);
 		logger.info("Random Number Generated:\t"+rand);
-		String set=s.replace(s.substring(startIndex+1, endIndex-1), rand);
+		String set=s.replaceFirst(s.substring(startIndex+1, endIndex-1), rand);
 		logger.info("Replaced subscription Name:\t"+set);
 		logger.info("Storing the subscription name for further Refernces");
 		String subscriptionName=set.substring(startIndex-6, endIndex-1).trim();
@@ -165,7 +165,7 @@ public class Rand{
 		logger.info("endindex"+endIndex);
 		String rand= Integer.toString(r);
 		logger.info("Random Number Generated:\t"+rand);
-		String set=s.replace(s.substring(startIndex+1, endIndex-1), rand);
+		String set=s.replaceFirst(s.substring(startIndex+1, endIndex-1), rand);
 		logger.info("Replaced subscription Name:\t"+set);
 		logger.info("Storing the subscription name for further Refernces");
 		String subscriptionName=set.substring(startIndex-7, endIndex-1).trim();
@@ -197,7 +197,7 @@ public class Rand{
 		logger.info("endindex"+endIndex);
 		String rand= Integer.toString(r);
 		logger.info("Random Number Generated:\t"+rand);
-		String set=s.replace(s.substring(startIndex+1, endIndex-1), rand);
+		String set=s.replaceFirst(s.substring(startIndex+1, endIndex-1), rand);
 		logger.info("Replaced Update Label Name:\t"+set);
 		logger.info("Storing the Update Label name for further Refernces");
 		String updatelabelName=set.substring(startIndex-6, endIndex-1).trim();
@@ -229,7 +229,7 @@ public class Rand{
 		logger.info("endindex"+endIndex);
 		String rand= Integer.toString(r);
 		logger.info("Random Number Generated:\t"+rand);
-		String set=s.replace(s.substring(startIndex+1, endIndex-1), rand);
+		String set=s.replaceFirst(s.substring(startIndex+1, endIndex-1), rand);
 		logger.info("Replaced Update Label Name:\t"+set);
 		logger.info("Storing the Update Label name for further Refernces");
 		String updatelabelName=set.substring(startIndex-6, endIndex-1).trim();

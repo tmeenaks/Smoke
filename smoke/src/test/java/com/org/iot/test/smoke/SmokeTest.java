@@ -13,6 +13,7 @@ import java.sql.SQLException;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.apache.log4j.*;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -24,6 +25,22 @@ import com.jayway.restassured.response.Response;
 
 public class SmokeTest extends TcConstants{
 	final static Logger logger = Logger.getLogger(SmokeTest.class);
+	
+	@BeforeClass
+	
+	public void setupAutomation() throws IOException{
+		PropertyConfigurator.configure("./log4j.properties");
+		Config csObj = new Config();
+		logger.info("Automation Started- Preparing Environment in the DAV");
+		Datasource ds = new Datasource(csObj.getdbLogin(),csObj.getdbpassword(),csObj.getdbName(),csObj.getdbHost(),csObj.getdbPort(),csObj.getconnectionURL());
+		logger.info("Cleaning Up Groups");
+		ds.Change("delete from\t" +GROUP+" where creator=\t"+"'"+csObj.getOrigin()+"'");
+		logger.info("Cleaning Up Containers");
+		ds.Change("delete from\t" +CONTAINER+" where creator=\t"+"'"+csObj.getOrigin()+"'");
+		logger.info("Cleaning Up Subscriptions");
+		ds.Change("delete from\t" +SUBSCRIPTION+" where creator=\t"+"'"+csObj.getOrigin()+"'");
+		
+	}
 
 
 	@Test(priority=1, description="Validate whether the application is able to access AE information")
@@ -563,14 +580,16 @@ public class SmokeTest extends TcConstants{
 				Rand ranObj = new Rand();
 				ranObj.setRandomCNT_UPDATE_DATA();
 				Response resp1=with().log().all().
-						header("X-M2M-Origin", cnObj.getOrigin()).
-						header("Authorization", cnObj.getAuthorization()).
+						header("X-M2M-Origin", cnObj.getOrigin_1()).
+						header("Authorization", cnObj.getAuthorization_1()).
 						header("X-M2M-RI",cnObj.randomRI()).
 						header("Content-Type",cnObj.getContentype_CNT()).
 						given().
 						body(tdOBJ.getupdateCNTBody()).
 						when().
 						put(URL);
+				
+				logger.info("Response Body Received from DAV\n"+ resp1.asString());
 
 				logger.info("Status Code received from Server"+resp1.statusCode());
 				if(resp1.statusCode()==SUCCESSOK){
@@ -589,8 +608,17 @@ public class SmokeTest extends TcConstants{
 
 						if(actual.equals(expectedLAB)){
 							logger.info("Label: \t" + actual + "\tFound in DAV");
-							logger.info("Testcase Passed and Ended");
-							Assert.assertEquals(actual,expectedLAB);
+							logger.info("Testcase Passed with Successfull Container Update Case");
+							logger.info("Checking the Notification table for the notifications subscribed application");
+							ResultSet res1 = ds.Query("Select * from\t" +NOTIFICATION+" where creator=\t"+"'"+cnObj.getOrigin()+"'");
+							while(res1.next()){
+								String actual1=res1.getString("representation");
+								if(actual1.contains(expectedLAB)){
+									logger.info("Test Case passed and Ended- Both Container Update and Conatiner Update Notification is Validated"+actual1);
+									Assert.assertEquals(actual,expectedLAB);
+									
+								}
+							}						
 						}
 
 						else{

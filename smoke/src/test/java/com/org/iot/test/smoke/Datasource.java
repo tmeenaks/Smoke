@@ -38,7 +38,7 @@ public class Datasource {
 		// DriverManager.registerDriver(new com.mysql.jdbc.Driver ());
 		try {
 			connection = DriverManager.getConnection(connurl, login, password);
-			statement = connection.createStatement();
+			//statement = connection.createStatement();
 			logger.info("Connection Established");
 		}
 
@@ -61,6 +61,22 @@ public class Datasource {
 	}
 
 
+	public void Change(String query){
+
+		try {
+			statement = connection.createStatement();
+			int rec1 = statement.executeUpdate(query);
+							
+				logger.info("Records used by the Automation Setup inthe previous run is removed\t"+rec1);			
+
+		}
+		catch (Exception e) {
+			logger.error("Exception occured:\n" + e.getMessage());
+		}
+
+	}
+
+
 	public void closeConnection(){
 
 		try {
@@ -72,7 +88,7 @@ public class Datasource {
 		}
 
 	}
-	
+
 }
 
 

@@ -65,13 +65,29 @@ public class Config{
 		return prop.getProperty("origin");
 
 	}
+	
+	public String getOrigin_1() throws IOException{
 
+		fis= new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+		prop=new Properties();
+		prop.load(fis);
+		return prop.getProperty("origin_1");
+
+	}
 	public String getAuthorization() throws IOException{
 
 		fis= new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("authorization");
+	}
+
+	public String getAuthorization_1() throws IOException{
+
+		fis= new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+		prop=new Properties();
+		prop.load(fis);
+		return prop.getProperty("authorization_1");
 
 	}
 

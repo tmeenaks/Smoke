@@ -6,6 +6,7 @@
       <class name="com.org.iot.test.smoke.SmokeTest">
         <methods>
           <include name="updateCNT"/>
+          <include name="setupAutomation"/>
         </methods>
       </class> <!-- com.org.iot.test.smoke.SmokeTest -->
     </classes>

@@ -19,6 +19,8 @@ public class TcConstants {
 	protected static final String SUBSCRIPTION="subscription";
 	protected static final String AE="application_entity";
 	protected static final String CONTAINER="container";
+	protected static final String GROUP="onem2mgroup";
+	protected static final String NOTIFICATION="notification";
 	
 	
 }

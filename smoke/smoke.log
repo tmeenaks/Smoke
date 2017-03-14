@@ -11838,3 +11838,190 @@ Starting Update Container data  Test Case
 2017-03-14 13:02:50 INFO  SmokeTest:611 - Testcase Passed with Successfull Container Update Case
 2017-03-14 13:02:50 INFO  SmokeTest:612 - Checking the Notification table for the notifications subscribed application
 2017-03-14 13:02:50 INFO  SmokeTest:617 - Test Case passed and Ended- Both Container Update and Conatiner Update Notification is Validated{"m2m:cnt": {"ri": "HPE_IoT/kutti_test/FORM_80", "st": 0, "ty": 0, "lbl": ["UPDATE_24"]}}
+2017-03-14 13:04:31 INFO  SmokeTest:34 - Automation Started- Preparing Environment in the DAV
+2017-03-14 13:04:31 INFO  Datasource:23 - Database Connection Method Called
+2017-03-14 13:04:31 INFO  Datasource:31 - Constructed Connection URL for the Databasejdbc:postgresql://localhost:5444/HP_IOT
+2017-03-14 13:04:31 INFO  Datasource:37 - JDBC Connection establisment initiated
+2017-03-14 13:04:31 INFO  Datasource:42 - Connection Established
+2017-03-14 13:04:31 INFO  SmokeTest:36 - Cleaning Up Groups
+2017-03-14 13:04:31 INFO  Datasource:70 - Records used by the Automation Setup inthe previous run is removed	1
+2017-03-14 13:04:31 INFO  SmokeTest:38 - Cleaning Up Containers
+2017-03-14 13:04:31 INFO  Datasource:70 - Records used by the Automation Setup inthe previous run is removed	1
+2017-03-14 13:04:31 INFO  SmokeTest:40 - Cleaning Up Subscriptions
+2017-03-14 13:04:31 INFO  Datasource:70 - Records used by the Automation Setup inthe previous run is removed	3
+2017-03-14 13:04:31 INFO  SmokeTest:50 - Starting Get Application Entity Information Test Case
+2017-03-14 13:04:31 INFO  SmokeTest:53 - Getting Node Link Pattern from the Config
+2017-03-14 13:04:31 INFO  SmokeTest:56 - Node Link Pattern fetched"nl":"2747"
+2017-03-14 13:04:31 INFO  SmokeTest:57 - Generating Headers and parameters
+2017-03-14 13:04:33 INFO  SmokeTest:68 - Status Code received from Server200
+2017-03-14 13:04:33 INFO  SmokeTest:70 - ****************DAV Hit and data fetched**********************
+2017-03-14 13:04:34 INFO  SmokeTest:76 - NodeLinkMatched:true
+2017-03-14 13:04:34 INFO  SmokeTest:77 - Response from the DAV:{"m2m:ae":{"ty":2,"ri":"HPE_IoT/kutti_test","pi":"HPE_IoT","ct":"20160831T101523","lt":"20170314T073144","lbl":["UPDATE_70"],"rn":"kutti_test","acpi":["HPE_IoT/kutti_test/9029a26ff97","HPE_IoT/1000_ACP_Smoke20","HPE_IoT/1000_ACP_Smoke20","HPE_IoT/1000_ACP_Smoke1"],"apn":"kutti_test","aei":"C52901ba8-294e7ce7","nl":"2747","rr":false}}
+2017-03-14 13:04:34 INFO  SmokeTest:78 - ***************************Get Application Entity Information Test Case Passed and Ended************************
+2017-03-14 13:04:34 INFO  SmokeTest:107 - 
+Starting Create Group Test Case
+2017-03-14 13:04:34 INFO  SmokeTest:109 - Constructing Post URL
+2017-03-14 13:04:34 INFO  SmokeTest:111 - Constructed URL for the Post Request :http://15.213.51.128:8080/HPE_IoT
+2017-03-14 13:04:34 INFO  SmokeTest:126 - Generating headres and parameters
+2017-03-14 13:04:34 INFO  SmokeTest:127 - Header and body params sent for the create request
+2017-03-14 13:04:34 INFO  Rand:63 - Setting Random Group Name Method Called
+2017-03-14 13:04:34 INFO  Rand:65 - Create Group Body Fetched from the dataSheet:	{"m2m:grp":{"rn":"GROUP_92","cr":"2222222222222222222222","cnm":22,"acpi":["SP_ACP_Smoke1_926328e5-e05a-4ff9-be8c-228ed675fb63"],"mnm":222222,"gn":"smoke_group8"}}
+2017-03-14 13:04:34 INFO  Rand:67 - startindex23
+2017-03-14 13:04:34 INFO  Rand:69 - endindex27
+2017-03-14 13:04:34 INFO  Rand:71 - Random Number Generated:	26
+2017-03-14 13:04:34 INFO  Rand:73 - Replaced Group Name:	{"m2m:grp":{"rn":"GROUP_26","cr":"2222222222222222222222","cnm":22,"acpi":["SP_ACP_Smoke1_926328e5-e05a-4ff9-be8c-228ed675fb63"],"mnm":222222,"gn":"smoke_group8"}}
+2017-03-14 13:04:34 INFO  Rand:74 - Storing the Group name for further Refernces
+2017-03-14 13:04:34 INFO  Rand:76 - GROUP_26
+2017-03-14 13:04:35 INFO  SmokeTest:142 - Response Code Received from the Server201
+2017-03-14 13:04:35 INFO  SmokeTest:146 - ****************DAV Hit and Group Posted**********************
+2017-03-14 13:04:35 INFO  SmokeTest:147 - Success Code 201 Created: Test Case Passed and Ended
+2017-03-14 13:04:35 INFO  SmokeTest:178 - 
+Starting Create Container Test Case
+2017-03-14 13:04:35 INFO  SmokeTest:180 - Constructing Post URL
+2017-03-14 13:04:35 INFO  SmokeTest:182 - Constructed URL for the Post Request :http://15.213.51.128:8080/HPE_IoT/kutti_test
+2017-03-14 13:04:35 INFO  SmokeTest:184 - Generating headres and parameters
+2017-03-14 13:04:35 INFO  SmokeTest:185 - Header and body params sent for the create request
+2017-03-14 13:04:35 INFO  Rand:29 - Setting Random Conatiner Name Call
+2017-03-14 13:04:35 INFO  Rand:31 - Container Body Fetched from the dataSheet:	{"m2m:cnt":{"rn":"FORM_80","mni": 290,"mbs": 2900,"mia": 29000,"acpi": ["SP_ACP_Smoke1_926328e5-e05a-4ff9-be8c-228ed675fb63"]}}
+2017-03-14 13:04:35 INFO  Rand:33 - startindex22
+2017-03-14 13:04:35 INFO  Rand:35 - endindex26
+2017-03-14 13:04:35 INFO  Rand:37 - Random Number Generated:	43
+2017-03-14 13:04:35 INFO  Rand:39 - Replaced the Old Container Name with New Container Name Randomly{"m2m:cnt":{"rn":"FORM_43","mni": 290,"mbs": 2900,"mia": 29000,"acpi": ["SP_ACP_Smoke1_926328e5-e05a-4ff9-be8c-228ed675fb63"]}}
+2017-03-14 13:04:35 INFO  Rand:40 - Storing the Container name for further Refernces
+2017-03-14 13:04:35 INFO  Rand:42 - FORM_43
+2017-03-14 13:04:35 INFO  SmokeTest:200 - Response Code Received from the Server201
+2017-03-14 13:04:35 INFO  SmokeTest:204 - ****************DAV Hit and Container Posted**********************
+2017-03-14 13:04:35 INFO  SmokeTest:205 - Test Case Passed and Ended Due to Success Code 201 Created
+2017-03-14 13:04:35 INFO  SmokeTest:239 - 
+Starting Get Application Entity Conatiner data Test Case
+2017-03-14 13:04:35 INFO  SmokeTest:243 - Constructing URL for the regquest
+2017-03-14 13:04:35 INFO  SmokeTest:245 - Constructed URL for the request:	http://15.213.51.128:8080/HPE_IoT/kutti_test/FORM_43
+2017-03-14 13:04:35 INFO  SmokeTest:246 - Generating Headers and parameters
+2017-03-14 13:04:35 INFO  SmokeTest:258 - Status Code received from Server200
+2017-03-14 13:04:35 INFO  SmokeTest:260 -  Success Code 201 Created
+2017-03-14 13:04:35 INFO  SmokeTest:267 - Repsonse Received from DAV:	{"m2m:cnt":{"ty":3,"ri":"HPE_IoT/kutti_test/FORM_43","pi":"HPE_IoT/kutti_test","ct":"20170314T073331","lt":"20170314T073331","rn":"FORM_43","acpi":["HPE_IoT/1000_ACP_Smoke1"],"et":"20270312T073331","st":0,"cr":"C502a233d-c8d9572b","mni":290,"mbs":2900,"mia":29000,"cni":0,"cbs":0}}
+2017-03-14 13:04:35 INFO  SmokeTest:268 - Test Case Passed and Ended
+2017-03-14 13:04:35 INFO  SmokeTest:294 - 
+Starting Create Subcription for a group  Test Case
+2017-03-14 13:04:35 INFO  SmokeTest:297 - Constructing URL for the request
+2017-03-14 13:04:35 INFO  SmokeTest:299 - Constructed URL for the request:	http://15.213.51.128:8080/HPE_IoT/GROUP_26
+2017-03-14 13:04:35 INFO  SmokeTest:300 - Generating Headers and parameters
+2017-03-14 13:04:35 INFO  Rand:95 - Setting Random Subscription Name Method Called
+2017-03-14 13:04:35 INFO  Rand:97 - Create subscription Body Fetched from the dataSheet:	{"m2m:sub":{"rn":"SUBSGROUP_22","nu": [],"enc":{"net":[1,2,3,4],"om":[1,2,4],"atr":[]},"lbl":["test"]}}
+2017-03-14 13:04:35 INFO  Rand:99 - startindex27
+2017-03-14 13:04:35 INFO  Rand:101 - endindex31
+2017-03-14 13:04:35 INFO  Rand:103 - Random Number Generated:	21
+2017-03-14 13:04:35 INFO  Rand:105 - Replaced subscription Name:	{"m2m:sub":{"rn":"SUBSGROUP_21","nu": [],"enc":{"net":[1,2,3,4],"om":[1,2,4],"atr":[]},"lbl":["test"]}}
+2017-03-14 13:04:35 INFO  Rand:106 - Storing the subscription name for further Refernces
+2017-03-14 13:04:35 INFO  Rand:108 - SUBSGROUP_21
+2017-03-14 13:04:36 INFO  SmokeTest:314 - Status Code received from Server201
+2017-03-14 13:04:36 INFO  SmokeTest:316 - ****************DAV Hit Subscription created**********************
+2017-03-14 13:04:36 INFO  SmokeTest:317 - Performing Database validation for the Subscription
+2017-03-14 13:04:36 INFO  Datasource:23 - Database Connection Method Called
+2017-03-14 13:04:36 INFO  Datasource:31 - Constructed Connection URL for the Databasejdbc:postgresql://localhost:5444/HP_IOT
+2017-03-14 13:04:36 INFO  Datasource:37 - JDBC Connection establisment initiated
+2017-03-14 13:04:36 INFO  Datasource:42 - Connection Established
+2017-03-14 13:04:36 INFO  SmokeTest:320 - Creator is the filter selection in the Database:	C502a233d-c8d9572b
+2017-03-14 13:04:36 INFO  SmokeTest:323 - Subscription Name Expected in the DataBase:	SUBSGROUP_21
+2017-03-14 13:04:36 INFO  SmokeTest:330 - Subscription Name: 	SUBSGROUP_21Found in DAV
+2017-03-14 13:04:36 INFO  SmokeTest:331 - Testcase Passed and Ended
+2017-03-14 13:04:36 INFO  SmokeTest:363 - 
+Starting Create Subcription for AE  Test Case
+2017-03-14 13:04:36 INFO  SmokeTest:366 - Constructing URL for the regquest
+2017-03-14 13:04:36 INFO  SmokeTest:368 - Constructed URL for the request:	http://15.213.51.128:8080/HPE_IoT/kutti_test
+2017-03-14 13:04:36 INFO  SmokeTest:369 - Generating Headers and parameters
+2017-03-14 13:04:36 INFO  Rand:127 - Setting Random Subscription Name Method Called
+2017-03-14 13:04:36 INFO  Rand:129 - Create subscription Body Fetched from the dataSheet:	{"m2m:sub":{"rn":"SUBSAE_94","nu": [],"enc": {"net": [1,2,3,4],"om": [1,2,3],"atr": [] },"lbl": ["test"]}}
+2017-03-14 13:04:36 INFO  Rand:131 - startindex24
+2017-03-14 13:04:36 INFO  Rand:133 - endindex28
+2017-03-14 13:04:36 INFO  Rand:135 - Random Number Generated:	50
+2017-03-14 13:04:36 INFO  Rand:137 - Replaced subscription Name:	{"m2m:sub":{"rn":"SUBSAE_50","nu": [],"enc": {"net": [1,2,3,4],"om": [1,2,3],"atr": [] },"lbl": ["test"]}}
+2017-03-14 13:04:36 INFO  Rand:138 - Storing the subscription name for further Refernces
+2017-03-14 13:04:36 INFO  Rand:140 - SUBSAE_50
+2017-03-14 13:04:36 INFO  SmokeTest:383 - Status Code received from Server201
+2017-03-14 13:04:36 INFO  SmokeTest:385 - ****************DAV Hit Subscription created**********************
+2017-03-14 13:04:36 INFO  SmokeTest:386 - Performing Database validation for the Subscription
+2017-03-14 13:04:36 INFO  Datasource:23 - Database Connection Method Called
+2017-03-14 13:04:36 INFO  Datasource:31 - Constructed Connection URL for the Databasejdbc:postgresql://localhost:5444/HP_IOT
+2017-03-14 13:04:36 INFO  Datasource:37 - JDBC Connection establisment initiated
+2017-03-14 13:04:36 INFO  Datasource:42 - Connection Established
+2017-03-14 13:04:36 INFO  SmokeTest:389 - Creator is the filter selection in the Database:	C502a233d-c8d9572b
+2017-03-14 13:04:36 INFO  SmokeTest:392 - Subscription Name Expected in the DataBase:	SUBSAE_50
+2017-03-14 13:04:36 INFO  SmokeTest:399 - Subscription Name: 	SUBSAE_50	Found in DAV
+2017-03-14 13:04:36 INFO  SmokeTest:400 - Testcase Passed and Ended
+2017-03-14 13:04:36 INFO  SmokeTest:433 - 
+Starting Create Subcription for AE's Conatiner  Test Case
+2017-03-14 13:04:36 INFO  SmokeTest:436 - Constructing URL for the regquest
+2017-03-14 13:04:36 INFO  SmokeTest:438 - Constructed URL for the request:	http://15.213.51.128:8080/HPE_IoT/kutti_test/FORM_43
+2017-03-14 13:04:36 INFO  SmokeTest:439 - Generating Headers and parameters
+2017-03-14 13:04:36 INFO  Rand:159 - Setting Random Subscription Name Method Called
+2017-03-14 13:04:36 INFO  Rand:161 - Create subscription Body Fetched from the dataSheet:	{"m2m:sub":{"rn":"SUBSCNT_55","nu": [],"enc": {"net": [1,2,3,4],"om": [1,3,4],"atr": [] },"lbl": ["test"]}}
+2017-03-14 13:04:36 INFO  Rand:163 - startindex25
+2017-03-14 13:04:36 INFO  Rand:165 - endindex29
+2017-03-14 13:04:36 INFO  Rand:167 - Random Number Generated:	43
+2017-03-14 13:04:36 INFO  Rand:169 - Replaced subscription Name:	{"m2m:sub":{"rn":"SUBSCNT_43","nu": [],"enc": {"net": [1,2,3,4],"om": [1,3,4],"atr": [] },"lbl": ["test"]}}
+2017-03-14 13:04:36 INFO  Rand:170 - Storing the subscription name for further Refernces
+2017-03-14 13:04:36 INFO  Rand:172 - SUBSCNT_43
+2017-03-14 13:04:37 INFO  SmokeTest:453 - Status Code received from Server201
+2017-03-14 13:04:37 INFO  SmokeTest:455 - ****************DAV Hit Subscription created**********************
+2017-03-14 13:04:37 INFO  SmokeTest:456 - Performing Database validation for the Subscription
+2017-03-14 13:04:37 INFO  Datasource:23 - Database Connection Method Called
+2017-03-14 13:04:37 INFO  Datasource:31 - Constructed Connection URL for the Databasejdbc:postgresql://localhost:5444/HP_IOT
+2017-03-14 13:04:37 INFO  Datasource:37 - JDBC Connection establisment initiated
+2017-03-14 13:04:37 INFO  Datasource:42 - Connection Established
+2017-03-14 13:04:37 INFO  SmokeTest:459 - Creator is the filter selection in the Database:	C502a233d-c8d9572b
+2017-03-14 13:04:37 INFO  SmokeTest:462 - Subscription Name Expected in the DataBase:	SUBSCNT_43
+2017-03-14 13:04:37 INFO  SmokeTest:469 - Subscription Name: 	SUBSCNT_43	Found in DAV
+2017-03-14 13:04:37 INFO  SmokeTest:470 - Testcase Passed and Ended
+2017-03-14 13:04:37 INFO  SmokeTest:503 - 
+Starting Update AE data  Test Case
+2017-03-14 13:04:37 INFO  SmokeTest:506 - Constructing URL for the request
+2017-03-14 13:04:37 INFO  SmokeTest:508 - Constructed URL for the request:	http://15.213.51.128:8080/HPE_IoT/kutti_test
+2017-03-14 13:04:37 INFO  SmokeTest:509 - Generating Headers and parameters
+2017-03-14 13:04:37 INFO  Rand:191 - Setting Random AE Update data method called
+2017-03-14 13:04:37 INFO  Rand:193 - Create AE Update Body Fetched from the dataSheet:	{"m2m:ae":{"lbl":["UPDATE_70"]}}
+2017-03-14 13:04:37 INFO  Rand:195 - startindex25
+2017-03-14 13:04:37 INFO  Rand:197 - endindex29
+2017-03-14 13:04:37 INFO  Rand:199 - Random Number Generated:	24
+2017-03-14 13:04:37 INFO  Rand:201 - Replaced Update Label Name:	{"m2m:ae":{"lbl":["UPDATE_24"]}}
+2017-03-14 13:04:37 INFO  Rand:202 - Storing the Update Label name for further Refernces
+2017-03-14 13:04:37 INFO  Rand:204 - UPDATE_24
+2017-03-14 13:04:37 INFO  SmokeTest:523 - Status Code received from Server200
+2017-03-14 13:04:37 INFO  SmokeTest:525 - ****************DAV Hit Label updated created**********************
+2017-03-14 13:04:37 INFO  SmokeTest:526 - Performing Database validation for the Update AE data
+2017-03-14 13:04:37 INFO  Datasource:23 - Database Connection Method Called
+2017-03-14 13:04:37 INFO  Datasource:31 - Constructed Connection URL for the Databasejdbc:postgresql://localhost:5444/HP_IOT
+2017-03-14 13:04:37 INFO  Datasource:37 - JDBC Connection establisment initiated
+2017-03-14 13:04:37 INFO  Datasource:42 - Connection Established
+2017-03-14 13:04:37 INFO  SmokeTest:529 - Asset Name is the filter selection in the Database:	kutti_test
+2017-03-14 13:04:37 INFO  SmokeTest:532 - Label Expected in the DataBase:	["UPDATE_24"]
+2017-03-14 13:04:37 INFO  SmokeTest:539 - Label: 	["UPDATE_24"]	Found in DAV
+2017-03-14 13:04:37 INFO  SmokeTest:540 - Testcase Passed and Ended
+2017-03-14 13:04:37 INFO  SmokeTest:572 - 
+Starting Update Container data  Test Case
+2017-03-14 13:04:37 INFO  SmokeTest:575 - Constructing URL for the request
+2017-03-14 13:04:37 INFO  SmokeTest:577 - Constructed URL for the request:	http://15.213.51.128:8080/HPE_IoT/kutti_test/FORM_43
+2017-03-14 13:04:37 INFO  SmokeTest:578 - Generating Headers and parameters
+2017-03-14 13:04:37 INFO  Rand:223 - Setting Random Conatiner Update data method called
+2017-03-14 13:04:37 INFO  Rand:225 - Create Container Update Body Fetched from the dataSheet:	{"m2m:cnt": {"lbl":["UPDATE_24"]}}
+2017-03-14 13:04:37 INFO  Rand:227 - startindex27
+2017-03-14 13:04:37 INFO  Rand:229 - endindex31
+2017-03-14 13:04:37 INFO  Rand:231 - Random Number Generated:	78
+2017-03-14 13:04:37 INFO  Rand:233 - Replaced Update Label Name:	{"m2m:cnt": {"lbl":["UPDATE_78"]}}
+2017-03-14 13:04:37 INFO  Rand:234 - Storing the Update Label name for further Refernces
+2017-03-14 13:04:37 INFO  Rand:236 - UPDATE_78
+2017-03-14 13:04:38 INFO  SmokeTest:592 - Response Body Received from DAV
+{"m2m:cnt":{"ty":3,"ri":"HPE_IoT/kutti_test/FORM_43","pi":"HPE_IoT/kutti_test","ct":"20170314T073331","lt":"20170314T073333","lbl":["UPDATE_78"],"rn":"FORM_43","acpi":["HPE_IoT/1000_ACP_Smoke1"],"et":"20270312T073331","st":1,"cr":"C502a233d-c8d9572b","mni":290,"mbs":2900,"mia":29000,"cni":0,"cbs":0}}
+2017-03-14 13:04:38 INFO  SmokeTest:594 - Status Code received from Server200
+2017-03-14 13:04:38 INFO  SmokeTest:596 - ****************DAV Hit Label updated created**********************
+2017-03-14 13:04:38 INFO  SmokeTest:597 - Performing Database validation for the Update Container data
+2017-03-14 13:04:38 INFO  Datasource:23 - Database Connection Method Called
+2017-03-14 13:04:38 INFO  Datasource:31 - Constructed Connection URL for the Databasejdbc:postgresql://localhost:5444/HP_IOT
+2017-03-14 13:04:38 INFO  Datasource:37 - JDBC Connection establisment initiated
+2017-03-14 13:04:38 INFO  Datasource:42 - Connection Established
+2017-03-14 13:04:38 INFO  SmokeTest:600 - Container-Resource Name is the filter selection in the Database:	FORM_43
+2017-03-14 13:04:38 INFO  SmokeTest:603 - Label Expected in the DataBase:	["UPDATE_78"]
+2017-03-14 13:04:38 INFO  SmokeTest:610 - Label: 	["UPDATE_78"]	Found in DAV
+2017-03-14 13:04:38 INFO  SmokeTest:611 - Testcase Passed with Successfull Container Update Case
+2017-03-14 13:04:38 INFO  SmokeTest:612 - Checking the Notification table for the notifications subscribed application
+2017-03-14 13:04:38 INFO  SmokeTest:617 - Test Case passed and Ended- Both Container Update and Conatiner Update Notification is Validated{"m2m:cnt": {"ri": "HPE_IoT/kutti_test/FORM_43", "st": 0, "ty": 0, "lbl": ["UPDATE_78"]}}

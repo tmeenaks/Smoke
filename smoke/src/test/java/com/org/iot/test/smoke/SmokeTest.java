@@ -31,7 +31,7 @@ public class SmokeTest extends TcConstants{
 	public void setupAutomation() throws IOException{
 		PropertyConfigurator.configure("./log4j.properties");
 		Config csObj = new Config();
-		logger.info("Automation Started- Preparing Environment in the DAV");
+		logger.info("Automation Started- Preparing Environment in the DAV table");
 		Datasource ds = new Datasource(csObj.getdbLogin(),csObj.getdbpassword(),csObj.getdbName(),csObj.getdbHost(),csObj.getdbPort(),csObj.getconnectionURL());
 		logger.info("Cleaning Up Groups");
 		ds.Change("delete from\t" +GROUP+" where creator=\t"+"'"+csObj.getOrigin()+"'");

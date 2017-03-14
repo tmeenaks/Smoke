@@ -2,48 +2,48 @@
 <testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9007" started-at="2017-03-14T06:46:32Z" finished-at="2017-03-14T06:46:41Z">
+  <suite name="Default suite" duration-ms="6230" started-at="2017-03-14T07:32:43Z" finished-at="2017-03-14T07:32:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9007" started-at="2017-03-14T06:46:32Z" finished-at="2017-03-14T06:46:41Z">
+    <test name="Default test" duration-ms="6230" started-at="2017-03-14T07:32:43Z" finished-at="2017-03-14T07:32:50Z">
       <class name="com.org.iot.test.smoke.SmokeTest">
-        <test-method status="PASS" signature="setupAutomation()[pri:0, instance:com.org.iot.test.smoke.SmokeTest@42dafa95]" name="setupAutomation" is-config="true" duration-ms="306" started-at="2017-03-14T12:16:32Z" finished-at="2017-03-14T12:16:32Z">
+        <test-method status="PASS" signature="setupAutomation()[pri:0, instance:com.org.iot.test.smoke.SmokeTest@6e1567f1]" name="setupAutomation" is-config="true" duration-ms="238" started-at="2017-03-14T13:02:43Z" finished-at="2017-03-14T13:02:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupAutomation -->
-        <test-method status="PASS" signature="getAE()[pri:1, instance:com.org.iot.test.smoke.SmokeTest@42dafa95]" name="getAE" duration-ms="3066" started-at="2017-03-14T12:16:32Z" description="Validate whether the application is able to access AE information" finished-at="2017-03-14T12:16:36Z">
+        <test-method status="PASS" signature="getAE()[pri:1, instance:com.org.iot.test.smoke.SmokeTest@6e1567f1]" name="getAE" duration-ms="1802" started-at="2017-03-14T13:02:44Z" description="Validate whether the application is able to access AE information" finished-at="2017-03-14T13:02:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAE -->
-        <test-method status="PASS" signature="createGroup()[pri:2, instance:com.org.iot.test.smoke.SmokeTest@42dafa95]" name="createGroup" duration-ms="1633" started-at="2017-03-14T12:16:36Z" description="Validate whether a device group can be created" finished-at="2017-03-14T12:16:37Z">
+        <test-method status="PASS" signature="createGroup()[pri:2, instance:com.org.iot.test.smoke.SmokeTest@6e1567f1]" name="createGroup" duration-ms="1224" started-at="2017-03-14T13:02:45Z" description="Validate whether a device group can be created" finished-at="2017-03-14T13:02:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createGroup -->
-        <test-method status="PASS" signature="createContainer()[pri:3, instance:com.org.iot.test.smoke.SmokeTest@42dafa95]" name="createContainer" duration-ms="870" started-at="2017-03-14T12:16:37Z" description="Validate Whether Application can able to create Container for device" finished-at="2017-03-14T12:16:38Z">
+        <test-method status="PASS" signature="createContainer()[pri:3, instance:com.org.iot.test.smoke.SmokeTest@6e1567f1]" name="createContainer" duration-ms="341" started-at="2017-03-14T13:02:47Z" description="Validate Whether Application can able to create Container for device" finished-at="2017-03-14T13:02:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createContainer -->
-        <test-method status="PASS" signature="getContainerData()[pri:4, instance:com.org.iot.test.smoke.SmokeTest@42dafa95]" name="getContainerData" duration-ms="173" started-at="2017-03-14T12:16:38Z" description="Validate whether the application is able to access the AE&#039;s container data" finished-at="2017-03-14T12:16:38Z">
+        <test-method status="PASS" signature="getContainerData()[pri:4, instance:com.org.iot.test.smoke.SmokeTest@6e1567f1]" name="getContainerData" duration-ms="156" started-at="2017-03-14T13:02:47Z" description="Validate whether the application is able to access the AE&#039;s container data" finished-at="2017-03-14T13:02:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getContainerData -->
-        <test-method status="PASS" signature="createSubscriptionGroup()[pri:5, instance:com.org.iot.test.smoke.SmokeTest@42dafa95]" name="createSubscriptionGroup" duration-ms="702" started-at="2017-03-14T12:16:38Z" description="Validate whether the application is able to create subscription for a group" finished-at="2017-03-14T12:16:39Z">
+        <test-method status="PASS" signature="createSubscriptionGroup()[pri:5, instance:com.org.iot.test.smoke.SmokeTest@6e1567f1]" name="createSubscriptionGroup" duration-ms="615" started-at="2017-03-14T13:02:47Z" description="Validate whether the application is able to create subscription for a group" finished-at="2017-03-14T13:02:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createSubscriptionGroup -->
-        <test-method status="PASS" signature="createSubscriptionAE()[pri:6, instance:com.org.iot.test.smoke.SmokeTest@42dafa95]" name="createSubscriptionAE" duration-ms="277" started-at="2017-03-14T12:16:39Z" description="Validate whether the application is able to create subscription for AE" finished-at="2017-03-14T12:16:39Z">
+        <test-method status="PASS" signature="createSubscriptionAE()[pri:6, instance:com.org.iot.test.smoke.SmokeTest@6e1567f1]" name="createSubscriptionAE" duration-ms="248" started-at="2017-03-14T13:02:48Z" description="Validate whether the application is able to create subscription for AE" finished-at="2017-03-14T13:02:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createSubscriptionAE -->
-        <test-method status="PASS" signature="createSubscriptionCNT()[pri:7, instance:com.org.iot.test.smoke.SmokeTest@42dafa95]" name="createSubscriptionCNT" duration-ms="239" started-at="2017-03-14T12:16:39Z" description="Validate whether the application is able to create subscription for AE&#039;s container" finished-at="2017-03-14T12:16:39Z">
+        <test-method status="PASS" signature="createSubscriptionCNT()[pri:7, instance:com.org.iot.test.smoke.SmokeTest@6e1567f1]" name="createSubscriptionCNT" duration-ms="315" started-at="2017-03-14T13:02:48Z" description="Validate whether the application is able to create subscription for AE&#039;s container" finished-at="2017-03-14T13:02:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createSubscriptionCNT -->
-        <test-method status="PASS" signature="updateAE()[pri:8, instance:com.org.iot.test.smoke.SmokeTest@42dafa95]" name="updateAE" duration-ms="1389" started-at="2017-03-14T12:16:39Z" description="Validate whether the application is able to update the AE data" finished-at="2017-03-14T12:16:41Z">
+        <test-method status="PASS" signature="updateAE()[pri:8, instance:com.org.iot.test.smoke.SmokeTest@6e1567f1]" name="updateAE" duration-ms="633" started-at="2017-03-14T13:02:48Z" description="Validate whether the application is able to update the AE data" finished-at="2017-03-14T13:02:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateAE -->
-        <test-method status="PASS" signature="updateCNT()[pri:9, instance:com.org.iot.test.smoke.SmokeTest@42dafa95]" name="updateCNT" duration-ms="288" started-at="2017-03-14T12:16:41Z" description="Validate whetehr the application is able to update the AE&#039;s container data" finished-at="2017-03-14T12:16:41Z">
+        <test-method status="PASS" signature="updateCNT()[pri:9, instance:com.org.iot.test.smoke.SmokeTest@6e1567f1]" name="updateCNT" duration-ms="618" started-at="2017-03-14T13:02:49Z" description="Validate whetehr the application is able to update the AE&#039;s container data" finished-at="2017-03-14T13:02:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateCNT -->

@@ -1,7 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>com.org.iot.test</groupId>
 	<artifactId>smoke</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -20,11 +19,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
+				<version>2.18.1</version>
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
+
 				</configuration>
 			</plugin>
 			<plugin>
@@ -63,6 +63,111 @@
 			<version>2.2.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>edb-jdbc17</groupId>
+			<artifactId>edb-jdbc17</artifactId>
+			<scope>system</scope>
+			<version>17.0</version>
+			<systemPath>${basedir}/lib/edb-jdbc17.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>dom4j-1.6.1</groupId>
+			<artifactId>dom4j-1.6.1</artifactId>
+			<scope>system</scope>
+			<version>1.6.1</version>
+			<systemPath>${basedir}/lib/dom4j-1.6.1.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-logging-1.1</groupId>
+			<artifactId>commons-logging-1.1</artifactId>
+			<scope>system</scope>
+			<version>1.1</version>
+			<systemPath>${basedir}/lib/commons-logging-1.1.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-logging-1.1</groupId>
+			<artifactId>commons-logging-1.1</artifactId>
+			<scope>system</scope>
+			<version>1.1</version>
+			<systemPath>${basedir}/lib/commons-logging-1.1.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j-1.2.17</groupId>
+			<artifactId>log4j-1.2.17</artifactId>
+			<scope>system</scope>
+			<version>1.2.17</version>
+			<systemPath>${basedir}/lib/log4j-1.2.17.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>poi-3.8-20120326</groupId>
+			<artifactId>poi-3.8-20120326</artifactId>
+			<scope>system</scope>
+			<version>3.8</version>
+			<systemPath>${basedir}/lib/poi-3.8-20120326.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>postgresql-9.2-1004.jdbc41</groupId>
+			<artifactId>postgresql-9.2-1004.jdbc41</artifactId>
+			<scope>system</scope>
+			<version>9.2</version>
+			<systemPath>${basedir}/lib/postgresql-9.2-1004.jdbc41.jar</systemPath>
+		</dependency>
+
+
+		<dependency>
+			<groupId>postgresql-9.4-1201.jdbc4</groupId>
+			<artifactId>postgresql-9.4-1201.jdbc4</artifactId>
+			<scope>system</scope>
+			<version>9.4</version>
+			<systemPath>${basedir}/lib/postgresql-9.4-1201.jdbc4.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>poi-examples-3.8-20120326</groupId>
+			<artifactId>poi-examples-3.8-20120326</artifactId>
+			<scope>system</scope>
+			<version>3.6</version>
+			<systemPath>${basedir}/lib/poi-examples-3.8-20120326.jar</systemPath>
+		</dependency>
+
+
+		<dependency>
+			<groupId>poi-excelant-3.8-20120326</groupId>
+			<artifactId>poi-excelant-3.8-20120326</artifactId>
+			<scope>system</scope>
+			<version>3.8</version>
+			<systemPath>${basedir}/lib/poi-excelant-3.8-20120326.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>poi-ooxml-3.8-20120326</groupId>
+			<artifactId>poi-ooxml-3.8-20120326</artifactId>
+			<scope>system</scope>
+			<version>3.8</version>
+			<systemPath>${basedir}/lib/poi-ooxml-3.8-20120326.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>poi-ooxml-schemas-3.8-20120326</groupId>
+			<artifactId>poi-ooxml-schemas-3.8-20120326</artifactId>
+			<scope>system</scope>
+			<version>3.8</version>
+			<systemPath>${basedir}/lib/poi-ooxml-schemas-3.8-20120326.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>poi-scratchpad-3.8-20120326</groupId>
+			<artifactId>poi-scratchpad-3.8-20120326</artifactId>
+			<scope>system</scope>
+			<version>3.8</version>
+			<systemPath>${basedir}/lib/poi-scratchpad-3.8-20120326.jar</systemPath>
+		</dependency>
 
 	</dependencies>
 </project>

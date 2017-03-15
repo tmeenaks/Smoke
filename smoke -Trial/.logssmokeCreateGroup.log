@@ -1,0 +1,5 @@
+2017-03-08 21:55:02 INFO  SmokeTest:33 - Starting Get Application Entity Information Test Case
+2017-03-08 21:55:02 INFO  SmokeTest:36 - Getting Node Link Pattern from the Config
+2017-03-08 21:55:02 INFO  SmokeTest:39 - Node Link Pattern fetched"nl":"2747"
+2017-03-08 21:55:02 INFO  SmokeTest:40 - Generating Headers and parameters
+2017-03-08 21:55:25 ERROR SmokeTest:79 - Test Case Failed and Ended due to Error in Connection:java.net.ConnectException: Connection timed out: connect

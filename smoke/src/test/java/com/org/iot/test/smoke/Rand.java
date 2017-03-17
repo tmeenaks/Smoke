@@ -18,7 +18,7 @@ public class Rand{
 
 	final static Logger logger = Logger.getLogger(Rand.class);
 	TestData tdobj=new TestData();
-	String FilePath=System.getProperty("user.dir")+"\\testdata.xls";
+	String FilePath="testdata.xls";
 	
 			
 	Random randomno = new Random();

@@ -28,7 +28,7 @@ public class Datasource {
 		this.db=db;
 		//this.url=url;
 		connurl = url+host+":"+port+"/"+db;
-		logger.info("Constructed Connection URL for the Database"+connurl);
+		logger.info("Constructed Connection URL for the Database:\t"+connurl);
 		Connect();
 	}
 
@@ -40,22 +40,26 @@ public class Datasource {
 			connection = DriverManager.getConnection(connurl, login, password);
 			//statement = connection.createStatement();
 			logger.info("Connection Established");
+			return;
 		}
 
 		catch (SQLException e) {
 			logger.error("Connection to the Database Failed\n"+e);
+			return;
 		}
 	}
 
 
 	public ResultSet Query(String query){
+		
 
 		try {
 			statement = connection.createStatement();
 			resultset = statement.executeQuery(query);
 		}
 		catch (Exception e) {
-			logger.error("Exception occured:\n" + e.getMessage());
+			logger.error("Exception occured:\n" + e);
+			
 		}
 		return resultset;
 	}
@@ -71,7 +75,8 @@ public class Datasource {
 
 		}
 		catch (Exception e) {
-			logger.error("Exception occured:\n" + e.getMessage());
+			logger.error("Exception occured:\n" + e);
+			return;
 		}
 
 	}

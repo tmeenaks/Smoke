@@ -30,9 +30,18 @@ public class Smoke extends TcConstants{
 	@BeforeClass
 
 	public void setupAutomation() throws IOException{
-		PropertyConfigurator.configure("./log4j.properties");
+		PropertyConfigurator.configure("log4j.properties");
 		Config csObj = new Config();
 		logger.info("Automation Started- Preparing Environment in the DAV table");
+		Tunneling tn = new Tunneling();	
+		//tn.dbserverTunnel();
+		if(tn.dbserverTunnel()==true){
+			logger.info("Tunneling Successfull");
+		}
+		else{
+			logger.info("Tunneling Not Done hence stopping the test");
+			Assert.fail();
+		}
 		Datasource ds = new Datasource(csObj.getdbLogin(),csObj.getdbpassword(),csObj.getdbName(),csObj.getdbHost(),csObj.getdbPort(),csObj.getconnectionURL());
 		logger.info("Cleaning Up Groups");
 		ds.Change("delete from\t" +GROUP+" where creator=\t"+"'"+csObj.getOrigin()+"'");
@@ -111,8 +120,8 @@ public class Smoke extends TcConstants{
 
 	@Test(priority=2, description="Validate whether a device group can be created")
 	public void createGroup()throws IOException, InvalidFormatException{
-		PropertyConfigurator.configure("./log4j.properties");
-		logger.info("\nStarting Create Group Test Case");
+		PropertyConfigurator.configure("log4j.properties");
+		logger.info("Starting Create Group Test Case");
 		Config cgOBJ = new Config();
 		logger.info("Constructing Post URL");
 		String URL = cgOBJ.getBaseUri()+cgOBJ.getPort()+cgOBJ.getBasepath();
@@ -189,7 +198,7 @@ public class Smoke extends TcConstants{
 	public void createContainer()throws IOException, InvalidFormatException{
 		PropertyConfigurator.configure("log4j.properties");
 
-		logger.info("\nStarting Create Container Test Case");
+		logger.info("Starting Create Container Test Case");
 		Config ccOBJ = new Config();
 		logger.info("Constructing Post URL");
 		String URL = ccOBJ.getBaseUri()+ccOBJ.getPort()+ccOBJ.getBasepath()+"/"+ccOBJ.getAsset();
@@ -358,12 +367,14 @@ public class Smoke extends TcConstants{
 						logger.info("Testcase Passed and Ended");
 						System.out.println("\n\n\n\n\n\n\n");
 						Assert.assertEquals(actual,expectedSUB);
+						return;
 					}
+					logger.error("Subscription Entry not Found");
+					System.out.println("\n\n\n\n\n\n\n");
+					Assert.fail();
+				}
+				
 
-					else{
-						logger.debug(actual);
-					}
-				}			
 			}
 			else if (resp1.statusCode()==UNAUTHORIZED){
 				logger.info("Test Case Failed and Ended due to DAV not Reachable-Unauthorized due to: Status Code"+ UNAUTHORIZED);
@@ -432,13 +443,14 @@ public class Smoke extends TcConstants{
 						logger.info("Testcase Passed and Ended");
 						System.out.println("\n\n\n\n\n\n\n");
 						Assert.assertEquals(actual,expectedSUB);
+						return;
 					}
 
-					else{
-						logger.debug(actual);
+				}	
 
-					}
-				}			
+				logger.error("Subscription Entry not Found");
+				System.out.println("\n\n\n\n\n\n\n");
+				Assert.fail();
 			}
 			else if (resp1.statusCode()==UNAUTHORIZED){
 				logger.info("Testcase Failed and ended due to DAV not Reachable-Unauthorized due to: Status Code"+ UNAUTHORIZED);
@@ -507,13 +519,13 @@ public class Smoke extends TcConstants{
 						logger.info("Testcase Passed and Ended");
 						System.out.println("\n\n\n\n\n\n\n");
 						Assert.assertEquals(actual,expectedSUB);
-					}
+						return;
+					}				
+				}	
 
-					else{
-						logger.debug(actual);
-
-					}
-				}			
+				logger.error("Subscription Entry not Found");
+				System.out.println("\n\n\n\n\n\n\n");
+				Assert.fail();
 			}
 			else if (resp1.statusCode()==UNAUTHORIZED){
 				logger.info("TestCase failed and Ended due to DAV not Reachable-Unauthorized due to: Status Code"+ UNAUTHORIZED);
@@ -582,13 +594,15 @@ public class Smoke extends TcConstants{
 						logger.info("Testcase Passed and Ended");
 						System.out.println("\n\n\n\n\n\n\n");
 						Assert.assertEquals(actual,expectedLAB);
+						return;
 					}
 
-					else{
-						logger.debug(actual);
 
-					}
-				}			
+				}	
+				
+				logger.error("Update label Entry not Found");
+				System.out.println("\n\n\n\n\n\n\n");
+				Assert.fail();
 			}
 			else if (resp1.statusCode()==UNAUTHORIZED){
 				logger.info("TestCase failed and Ended due to DAV not Reachable-Unauthorized due to: Status Code"+ UNAUTHORIZED);
@@ -664,16 +678,25 @@ public class Smoke extends TcConstants{
 								logger.info("Test Case passed and Ended- Both Container Update and Conatiner Update Notification is Validated"+actual1);
 								System.out.println("\n\n\n\n\n\n\n");
 								Assert.assertEquals(actual,expectedLAB);
+								return;
 
 							}
-						}						
+
+
+						}	
+
+						logger.error("Notification entry not found");
+						System.out.println("\n\n\n\n\n\n\n");
+						Assert.fail();
+						return;
+
 					}
 
-					else{
-						logger.debug(actual);
+				}	
 
-					}
-				}			
+				logger.error("Update Container entry not found");
+				System.out.println("\n\n\n\n\n\n\n");
+				Assert.fail();
 			}
 			else if (resp1.statusCode()==UNAUTHORIZED){
 				logger.info("TestCase failed and Ended due to DAV not Reachable-Unauthorized due to: Status Code"+ UNAUTHORIZED);

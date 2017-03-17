@@ -12,7 +12,7 @@ import org.apache.log4j.*;
 public class TestData {
 	final static Logger logger = Logger.getLogger(TestData.class);
 
-	String FilePath=System.getProperty("user.dir")+"\\testdata.xls";
+	String FilePath="testdata.xls";
 
 
 	/*	public String getRN() throws IOException{

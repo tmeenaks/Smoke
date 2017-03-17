@@ -22,7 +22,7 @@ public class Config{
 
 	public String getBaseUri() throws IOException{
 
-		fis= new FileInputStream(".\\config.properties");
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("baseuri");
@@ -31,7 +31,7 @@ public class Config{
 
 	public String getBasepath() throws IOException{
 
-		fis= new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("basepath");
@@ -41,7 +41,7 @@ public class Config{
 	
 	public String getPort() throws IOException{
 
-		fis= new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return (prop.getProperty("port"));
@@ -50,7 +50,7 @@ public class Config{
 	
 	public String getAsset() throws IOException{
 
-		fis= new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return (prop.getProperty("assetname"));
@@ -59,7 +59,7 @@ public class Config{
 
 	public String getOrigin() throws IOException{
 
-		fis= new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("origin");
@@ -68,7 +68,7 @@ public class Config{
 	
 	public String getOrigin_1() throws IOException{
 
-		fis= new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("origin_1");
@@ -76,7 +76,7 @@ public class Config{
 	}
 	public String getAuthorization() throws IOException{
 
-		fis= new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("authorization");
@@ -84,7 +84,7 @@ public class Config{
 
 	public String getAuthorization_1() throws IOException{
 
-		fis= new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("authorization_1");
@@ -93,7 +93,7 @@ public class Config{
 
 	public String getContentype_AE() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("contenttype_AE");
@@ -102,7 +102,7 @@ public class Config{
 	
 	public String getContentype_GRP() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("contenttype_GRP");
@@ -111,7 +111,7 @@ public class Config{
 	
 	public String getContentype_CNT() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("contenttype_CNT");
@@ -120,7 +120,7 @@ public class Config{
 	
 	public String getContentype_SUBS() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("contenttype_SUB");
@@ -130,7 +130,7 @@ public class Config{
 
 	public String getSyncrequest() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("sync");
@@ -139,7 +139,7 @@ public class Config{
 
 	public String getAsyncrequest() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("async");
@@ -148,14 +148,14 @@ public class Config{
 
 	public String getAccept() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("accept");
 	}
 	public String getNodelink() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("nodelink");
@@ -163,7 +163,7 @@ public class Config{
 	
 	public String getconnectionURL() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("connectionurl");
@@ -171,7 +171,7 @@ public class Config{
 
 	public String getdbPort() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("dbport");
@@ -179,7 +179,7 @@ public class Config{
 	
 	public String getdbHost() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("host");
@@ -187,7 +187,7 @@ public class Config{
 	
 	public String getdbpassword() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("password");
@@ -195,17 +195,58 @@ public class Config{
 	
 	public String getdbLogin() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("login");
 	}
 	public String getdbName() throws IOException{
 
-		fis= new FileInputStream((System.getProperty("user.dir")+"\\config.properties"));
+		fis= new FileInputStream("config.properties");
 		prop=new Properties();
 		prop.load(fis);
 		return prop.getProperty("databasename");
+	}
+	
+	public String gettunnelHost() throws IOException{
+
+		fis= new FileInputStream("config.properties");
+		prop=new Properties();
+		prop.load(fis);
+		return prop.getProperty("tunnelhost");
+	}
+	
+	
+	public String gettunnelLogin() throws IOException{
+
+		fis= new FileInputStream("config.properties");
+		prop=new Properties();
+		prop.load(fis);
+		return prop.getProperty("tunnellogin");
+	}
+	
+	public String gettunnelPassword() throws IOException{
+
+		fis= new FileInputStream("config.properties");
+		prop=new Properties();
+		prop.load(fis);
+		return prop.getProperty("tunnelpassword");
+	}
+	
+	public int gettunnelsourcePort() throws IOException{
+
+		fis= new FileInputStream("config.properties");
+		prop=new Properties();
+		prop.load(fis);
+		return Integer.parseInt(prop.getProperty("tunneldbsourceport"));
+	}
+	
+	public int gettunnelremotePort() throws IOException{
+
+		fis= new FileInputStream("config.properties");
+		prop=new Properties();
+		prop.load(fis);
+		return Integer.parseInt(prop.getProperty("tunneldbremoteport"));
 	}
 	
 }
